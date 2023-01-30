@@ -193,14 +193,14 @@ api.map.bulk_register({
     {
         mode = { "n","i" },
         lhs = "<c-s>",
-        rhs = "<cmd>w!<CR>",
+        rhs = "<cmd>wall!<CR>",
         options = { silent = true },
         description = "Save",
     },
     {
         mode = { "n" },
         lhs = "<leader>w",
-        rhs = "<cmd>wall!<CR>",
+        rhs = "<cmd>w!<CR>",
         options = { silent = true },
         description = "Save All",
     },
