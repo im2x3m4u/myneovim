@@ -24,6 +24,7 @@ function M.load()
     M.lualine.setup({
         options = {
             theme = "starlight",
+            -- theme = "ayu",
             icons_enabled = true,
             component_separators = { left = "", right = "" },
             section_separators = { left = "", right = "" },

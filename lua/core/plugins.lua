@@ -21,6 +21,7 @@ plugins.theme = {
     { 'RRethy/nvim-base16' },
     { 'Everblush/everblush.nvim' },
     { "savq/melange" },
+    { "Shatur/neovim-ayu" },
 }
 
 plugins.lsp = {

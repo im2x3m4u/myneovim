@@ -17,6 +17,8 @@ function M.load()
         javascript = { "typescript" },
         typescript = { "javascript" },
         vue = { "javascript", "typescript" },
+        htmldjango = { "html", "bs5" },
+        html = { "bs5" },
     }
 end
 

@@ -236,6 +236,16 @@ api.map.bulk_register({
     },
     {
         mode = { "n" },
+        lhs = "<leader>fr",
+        rhs = "<cmd>lua require('telescope.builtin').registers()<CR>",
+        -- rhs = function()
+        --     require("telescope.builtin").oldfiles()
+        -- end,
+        options = { silent = true },
+        description = "Find register, paste the content.",
+    },
+    {
+        mode = { "n" },
         lhs = "<leader>e",
         rhs = "<cmd>lua require('telescope.builtin').oldfiles()<CR>",
         -- rhs = function()
@@ -243,6 +253,34 @@ api.map.bulk_register({
         -- end,
         options = { silent = true },
         description = "Find files history",
+    },
+    {
+        mode = { "v" },
+        lhs = "<tab>",
+        rhs = ">gv",
+        options = { silent = true },
+        description = "block indent left",
+    },
+    {
+        mode = { "v" },
+        lhs = "<s-tab>",
+        rhs = "<gv",
+        options = { silent = true },
+        description = "block indent right",
+    },
+    {
+        mode = { "n" },
+        lhs = "<tab>",
+        rhs = "v>",
+        options = { silent = true },
+        description = "line indent left",
+    },
+    {
+        mode = { "n" },
+        lhs = "<s-tab>",
+        rhs = "v<",
+        options = { silent = true },
+        description = "line indent right",
     },
 })
 

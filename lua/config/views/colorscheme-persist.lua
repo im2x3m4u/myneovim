@@ -22,7 +22,7 @@ function M.after() end
 function M.register_key()
     api.map.register({
             mode = { "n" },
-            lhs = "<leader>sc",
+            lhs = "<c-t>",
             rhs = function()
                 M.colorscheme_persist.picker()
             end,
