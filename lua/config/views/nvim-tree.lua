@@ -69,8 +69,8 @@ function M.load()
             require_confirm = true,
         },
         filters = {
-            dotfiles = false,
-            custom = { "node_modules", "\\.cache", "__pycache__" },
+            dotfiles = true,
+            custom = { "node_modules", "\\.cache", "__pycache__", "\\.git", "\\.vscode" },
             exclude = {},
         },
         renderer = {

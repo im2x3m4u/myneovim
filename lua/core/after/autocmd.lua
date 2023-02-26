@@ -58,3 +58,13 @@ if options.auto_remove_new_lines_comment then
         end,
     })
 end
+
+-- save session every time a buffer is written
+vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
+    pattern = { "*" },
+    callback = function ()
+        if vim.bo.filetype ~= 'git'
+            and not vim.bo.filetype ~= 'gitcommit'
+        then require('session_manager').autosave_session() end
+    end
+})

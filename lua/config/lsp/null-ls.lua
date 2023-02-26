@@ -17,6 +17,7 @@ function M.load()
     table.insert(M.null_ls.builtins.formatting.shfmt.filetypes, "zsh")
 
     M.null_ls.setup({
+        border = options.float_border and "double" or "none",
         sources = {
             M.null_ls.builtins.formatting.gofmt,
             M.null_ls.builtins.formatting.shfmt,

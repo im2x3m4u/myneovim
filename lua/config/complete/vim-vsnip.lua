@@ -16,7 +16,7 @@ function M.load()
     vim.g.vsnip_filetypes = {
         javascript = { "typescript" },
         typescript = { "javascript" },
-        vue = { "javascript", "typescript" },
+        vue = { "javascript", "typescript", "html", "quasar" },
         htmldjango = { "html", "bs5" },
         html = { "bs5" },
     }

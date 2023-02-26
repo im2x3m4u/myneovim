@@ -14,6 +14,7 @@ local root_files = {
     ".stylua.toml",
     "selene.toml",
     "README.md",
+    "init.lua",
 }
 
 return {

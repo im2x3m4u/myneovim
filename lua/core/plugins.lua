@@ -22,6 +22,7 @@ plugins.theme = {
     { 'Everblush/everblush.nvim' },
     { "savq/melange" },
     { "Shatur/neovim-ayu" },
+    { "catppuccin/nvim", as = "catppuccin" },
 }
 
 plugins.lsp = {
@@ -56,6 +57,7 @@ plugins.dap = {
 plugins.editor = {
     { "mrjones2014/nvim-ts-rainbow" },
     { "AndrewRadev/switch.vim" },
+    { "Shatur/neovim-session-manager" },
     { "jbyuki/venn.nvim", module = "venn" },
     { "windwp/nvim-autopairs", event = { "InsertEnter" } },
     { "ur4ltz/surround.nvim", event = { "BufRead", "BufNewFile" } },
@@ -77,6 +79,10 @@ plugins.editor = {
        "max397574/better-escape.nvim",
         event = { "InsertEnter" },
     },
+    {
+       "cbochs/grapple.nvim",
+       requires = { "nvim-lua/plenary.nvim" },
+    }
 }
 
 

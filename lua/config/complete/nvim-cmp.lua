@@ -101,7 +101,7 @@ function M.load()
                     fallback()
                 end
             end, { "i", "s", "c" }),
-            ["<c-k>"] = M.cmp.mapping(function()
+            ["<c-e>"] = M.cmp.mapping(function()
                 if M.cmp.visible() then
                     M.cmp.abort()
                 else
