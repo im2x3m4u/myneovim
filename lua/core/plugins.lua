@@ -79,10 +79,12 @@ plugins.editor = {
        "max397574/better-escape.nvim",
         event = { "InsertEnter" },
     },
+    { "alexghergh/nvim-tmux-navigation" },
     {
        "cbochs/grapple.nvim",
        requires = { "nvim-lua/plenary.nvim" },
-    }
+    },
+    { 'chentoast/marks.nvim' }
 }
 
 

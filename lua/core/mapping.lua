@@ -5,6 +5,13 @@ local mapping = {}
 api.map.bulk_register({
     {
         mode = { "n" },
+        lhs = "<c-q>",
+        rhs = ":bd<cr>",
+        options = { silent = true },
+        description = "Close current buffer",
+    },
+    {
+        mode = { "n" },
         lhs = "<leader><esc>",
         rhs = ":qa!<cr>",
         options = { silent = true },
@@ -83,6 +90,34 @@ api.map.bulk_register({
         rhs = "<cmd>set spell!<cr>",
         options = { silent = true },
         description = "Enable or disable spell checking",
+    },
+    {
+        mode = { "i" },
+        lhs = "<A-k>",
+        rhs = "<up>",
+        options = {},
+        description = "Move cursor up",
+    },
+    {
+        mode = { "i" },
+        lhs = "<A-j>",
+        rhs = "<down>",
+        options = {},
+        description = "Move cursor down",
+    },
+    {
+        mode = { "i" },
+        lhs = "<A-h>",
+        rhs = "<left>",
+        options = {},
+        description = "Move cursor left",
+    },
+    {
+        mode = { "i" },
+        lhs = "<A-l>",
+        rhs = "<right>",
+        options = {},
+        description = "Move cursor right",
     },
     {
         mode = { "c" },
@@ -319,7 +354,7 @@ api.map.bulk_register({
     },
     {
         mode = { "n", "v" },
-        lhs = "<c-v>",
+        lhs = "<leader>v",
         rhs = '"ap',
         options = { silent = true },
         description = "paste from register a",

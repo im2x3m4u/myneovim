@@ -117,6 +117,8 @@ function M.load()
     })
 end
 
-function M.after() end
+function M.after()
+    lvim.builtin.treesitter.autotag.enable = true
+end
 
 return M

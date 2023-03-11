@@ -98,13 +98,13 @@ function M.after() end
 
 function M.register_key()
     api.map.bulk_register({
-        {
-            mode = { "n" },
-            lhs = "<c-q>",
-            rhs = "<cmd>BufferDelete<cr>",
-            options = { silent = true },
-            description = "Close current buffer",
-        },
+        -- {
+        --     mode = { "n" },
+        --     lhs = "<c-q>",
+        --     rhs = "<cmd>BufferDelete<cr>",
+        --     options = { silent = true },
+        --     description = "Close current buffer",
+        -- },
         {
 
             mode = { "n" },

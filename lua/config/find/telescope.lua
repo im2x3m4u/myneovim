@@ -20,7 +20,7 @@ function M.load()
             entry_prefix = " ",
             multi_icon = " ",
             color_devicons = true,
-            file_ignore_patterns = { "node_modules" },
+            file_ignore_patterns = { "node_modules","bundle.js","bundle.css", "min.js", "min.css" },
             -- theme
             layout_strategy = "bottom_pane",
             -- config
