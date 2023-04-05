@@ -12,25 +12,27 @@ local M = {
 
 M.installer_resources = {
     lsp = {
-        "gopls",
+        -- "gopls",
         "pyright",
+        "python-lsp-server",
         "css-lsp",
         "json-lsp",
         "html-lsp",
         "emmet-ls",
         "vetur-vls",
-        "vim-language-server",
+        -- "vim-language-server",
         "lua-language-server",
         "bash-language-server",
         "typescript-language-server",
-        "tailwindcss-language-server",
+        -- "tailwindcss-language-server",
     },
     dap = {
         "delve",
         "debugpy",
     },
     linter = {
-        "pylint",
+        "flake8",
+        -- "pylint",
     },
     formatter = {
         "shfmt",

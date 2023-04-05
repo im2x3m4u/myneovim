@@ -9,6 +9,7 @@ plugins.basic = {
     { "nvim-lua/plenary.nvim", module = "plenary" },
     { "williamboman/mason.nvim", after = { "nvim-notify" } },
     { "nvim-treesitter/nvim-treesitter", module = "nvim-treesitter", run = { ":TSUpdate" } },
+    { "nvim-treesitter/nvim-treesitter-textobjects" },
     { "kyazdani42/nvim-web-devicons", module = "nvim-web-devicons" },
 }
 
@@ -16,10 +17,10 @@ plugins.theme = {
     { "askfiy/starlight" },
     { "rebelot/kanagawa.nvim" },
     { "EdenEast/nightfox.nvim" },
-    { 'folke/tokyonight.nvim' },
-    { 'projekt0n/github-nvim-theme' },
-    { 'RRethy/nvim-base16' },
-    { 'Everblush/everblush.nvim' },
+    { "folke/tokyonight.nvim" },
+    { "projekt0n/github-nvim-theme" },
+    { "RRethy/nvim-base16" },
+    { "Everblush/everblush.nvim" },
     { "savq/melange" },
     { "Shatur/neovim-ayu" },
     { "catppuccin/nvim", as = "catppuccin" },
@@ -76,17 +77,16 @@ plugins.editor = {
         keys = { "<c-n>" },
     },
     {
-       "max397574/better-escape.nvim",
+        "max397574/better-escape.nvim",
         event = { "InsertEnter" },
     },
     { "alexghergh/nvim-tmux-navigation" },
     {
-       "cbochs/grapple.nvim",
-       requires = { "nvim-lua/plenary.nvim" },
+        "cbochs/grapple.nvim",
+        requires = { "nvim-lua/plenary.nvim" },
     },
-    { 'chentoast/marks.nvim' }
+    { "chentoast/marks.nvim" },
 }
-
 
 plugins.lanaguage = {
     { "davidgranstrom/nvim-markdown-preview", ft = { "markdown" } },

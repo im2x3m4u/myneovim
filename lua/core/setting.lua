@@ -5,6 +5,7 @@ setting.g = {
 }
 
 setting.opt = {
+    cmdheight = 0,
     tabstop = 4,
     softtabstop = 4,
     shiftwidth = 4,

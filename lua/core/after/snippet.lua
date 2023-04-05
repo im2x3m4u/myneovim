@@ -38,9 +38,9 @@ local function load_html_snippets()
     ---@diagnostic disable-next-line: missing-parameter
     local dir_name = vim.fn.expand("%:p:h:t")
     if dir_name == "templates" and api.path.exists(api.path.join(root_dir, "manage.py")) then
-        load_snippet("html", "djangohtml")
+        load_snippet("html", "htmldjango")
     else
-        unload_snippet("html", "djangohtml")
+        unload_snippet("html", "htmldjango")
     end
 end
 

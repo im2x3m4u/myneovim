@@ -49,6 +49,13 @@ function M.register_key()
     api.map.bulk_register({
         {
             mode = { "n" },
+            lhs = "<leader>h",
+            rhs = vim.lsp.buf.hover,
+            options = { silent = true },
+            description = "Show hover",
+        },
+        {
+            mode = { "n" },
             lhs = "<leader>ca",
             rhs = vim.lsp.buf.code_action,
             options = { silent = true },
@@ -107,12 +114,19 @@ function M.register_key()
         },
         {
             mode = { "n" },
-            lhs = "gD",
+            lhs = "<leader>D",
             rhs = function()
                 require("telescope.builtin").lsp_type_definitions()
             end,
             options = { silent = true },
             description = "Go to type definitions",
+        },
+        {
+            mode = { "n" },
+            lhs = "gD",
+            rhs = vim.lsp.buf.declaration,
+            options = { silent = true },
+            description = "Go to declaration",
         },
         {
             mode = { "n" },
