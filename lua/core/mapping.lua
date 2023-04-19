@@ -364,7 +364,7 @@ api.map.bulk_register({
         lhs = "<leader>y6",
         rhs = '"fy',
         options = { silent = true },
-        description = "copy to register f",
+        description = "copy to register c",
     },
     {
         mode = { "v" },

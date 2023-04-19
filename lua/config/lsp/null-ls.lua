@@ -22,11 +22,12 @@ function M.load()
             -- M.null_ls.builtins.formatting.gofmt,
             M.null_ls.builtins.formatting.shfmt,
             M.null_ls.builtins.formatting.prettierd.with({
-                filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "css", "scss", "less", "html", "json", "jsonc", "yaml", "markdown", "markdown.mdx", "graphql", "handlebars", "htmldjango" }
+                filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "css", "scss", "less", "html", "json", "jsonc", "yaml", "markdown", "markdown.mdx", "graphql", "handlebars"}
             }),
             M.null_ls.builtins.formatting.blade_formatter,
             M.null_ls.builtins.formatting.phpcsfixer,
             M.null_ls.builtins.formatting.autopep8,
+            M.null_ls.builtins.formatting.djlint,
             M.null_ls.builtins.formatting.sql_formatter,
             M.null_ls.builtins.formatting.stylua.with({
                 extra_args = {

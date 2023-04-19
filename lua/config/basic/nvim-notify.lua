@@ -37,6 +37,8 @@ function M.before()
         -- navic
         'nvim%-navic: Server ".*" does not support documentSymbols.',
         "nvim%-navic: Failed to attach to jsonls for current buffer. Already attached to jsonls",
+        "nvim%-navic: Failed to attach to pylsp for current buffer. Already attached to pylsp",
+        "nvim%-navic: Failed to attach to vuels for current buffer. Already attached to vuels",
     }
 end
 

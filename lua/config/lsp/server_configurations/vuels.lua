@@ -6,7 +6,7 @@ local root_files = {
     "tsconfig.json",
     "package.json",
     "jsconfig.json",
-    ".git",
+    "vue.config.js",
 }
 
 return {

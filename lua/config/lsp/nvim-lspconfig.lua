@@ -2,6 +2,7 @@
 
 local api = require("utils.api")
 local aux_lspconfig = require("utils.aux.lspconfig")
+-- local lspconfig_configs = require("lspconfig.configs")
 
 local M = {
     requires = {
@@ -15,12 +16,36 @@ function M.before()
     M.register_key()
 end
 
+function M.dump(o)
+    if type(o) == "table" then
+        local s = "{ "
+        for k, v in pairs(o) do
+            if type(k) ~= "number" then
+                k = '"' .. k .. '"'
+            end
+            s = s .. "[" .. k .. "] = " .. M.dump(v) .. ","
+        end
+        return s .. "} "
+    else
+        return tostring(o)
+    end
+end
+
 function M.load()
     aux_lspconfig.entry()
 
+    local lspconfig_configs = require'lspconfig.configs'
     local configurations_dir_path = "config/lsp/server_configurations/"
+    local servers = M.mason_lspconfig.get_installed_servers()
+    table.insert(servers, "volar_api")
+    table.insert(servers, "volar_doc")
+    table.insert(servers, "volar_html")
+    -- local volar_api = require('config/lsp/server_configurations/volar_api')
+    -- local lspconfig_configs = require'lspconfig.configs'
+    -- lspconfig_configs.volar_api= volar_api
+    -- lspconfig_configs.volar_api.setup{}
 
-    for _, server_name in ipairs(M.mason_lspconfig.get_installed_servers()) do
+    for _, server_name in ipairs(servers) do
         local require_path = string.format("%s%s", configurations_dir_path, server_name)
 
         local ok, settings = pcall(require, require_path)
@@ -39,7 +64,12 @@ function M.load()
             client.server_capabilities.semanticTokensProvider = nil
         end
 
-        M.lspconfig[server_name].setup(settings)
+        if server_name == "volar_api" or server_name == "volar_doc" or server_name == "volar_html" then
+            lspconfig_configs[server_name]=settings
+            lspconfig_configs[server_name].setup{}
+        else
+            M.lspconfig[server_name].setup(settings)
+        end
     end
 end
 
